@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.serialization)  // for Kotlin serialization for Retrofit
 }
 
 android {
@@ -56,27 +57,18 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     testImplementation(libs.junit)
 
-//    implementation(libs.androidx.core.ktx)
-//    implementation(libs.androidx.lifecycle.runtime.ktx)
-//    implementation(libs.androidx.activity.compose)
-//    implementation(platform(libs.androidx.compose.bom))
-//    implementation(libs.androidx.ui)
-//    implementation(libs.androidx.ui.graphics)
-//    implementation(libs.androidx.ui.tooling.preview)
-//    implementation(libs.androidx.material3)
-//
-//    implementation(libs.material3)//material3 for custom ripple effect
-//    implementation(libs.androidx.activity.ktx)// activity dependency for Google ImagePicker
-//    implementation(libs.google.accompanist.systemuicontroller)// Google accompanist for SystemUiController
-//    implementation(libs.material)// google material for icons
-//    implementation(libs.androidx.navigation.compose)// Navigation
-//
-/** Coil for image viewing */
+    /** Retrofit web API */
+//    implementation(libs.retrofit2.kotlinx.serialization.converter)
+//    implementation(libs.retrofit)
+//    implementation(libs.okhttp)
+//    implementation(libs.kotlinx.serialization.json)
+
+    /** Coil for image viewing */
 //    implementation(libs.coil.compose)
 //    implementation(libs.coil.network.okhttp)
 //    implementation(libs.coil.video)
-//
-/** room */
+
+    /** Room Locale Database */
 //    implementation(libs.androidx.room.runtime)
 //    // If this project uses any Kotlin source, use Kotlin Symbol Processing (KSP)
 //    ksp(libs.androidx.room.compiler)
@@ -85,18 +77,25 @@ dependencies {
 //    // annotationProcessor(libs.androidx.room.compiler)
 //    // optional - Kotlin Extensions and Coroutines support for Room
 //    implementation(libs.androidx.room.ktx)
-//
-/** Retrofit for currency conversion API */
-//    implementation(libs.retrofit2.kotlinx.serialization.converter)
-//    implementation(libs.retrofit)
-//    implementation(libs.okhttp)
-//    implementation(libs.kotlinx.serialization.json)
-//
-//    testImplementation(libs.junit)
-//    testImplementation(libs.mockk) // kotlin mocking framework
-//    testImplementation(libs.kotlinx.coroutines.test) // coroutine test (runTest)
+
+    /** Unit tests */
 //    testImplementation(libs.okhttp3.mockwebserver)// MockWebServer for API testing
-//    testImplementation(libs.mockito.kotlin)// Mockito
+//    testImplementation(libs.kotlinx.coroutines.test) // coroutine test (runTest)
+//    testImplementation(libs.mockito.kotlin)// Mockito mocking framework
+
+    /** dependencies to be checked */
+//    implementation(libs.androidx.core.ktx)
+//    implementation(libs.androidx.lifecycle.runtime.ktx)
+//    implementation(libs.androidx.ui)
+//    implementation(libs.androidx.ui.graphics)
+//    implementation(libs.androidx.ui.tooling.preview)
+//    implementation(libs.material3)//material3 for custom ripple effect
+//    implementation(libs.androidx.activity.ktx)// activity dependency for Google ImagePicker
+//    implementation(libs.google.accompanist.systemuicontroller)// Google accompanist for SystemUiController
+//    implementation(libs.material)// google material for icons
+//    implementation(libs.androidx.navigation.compose)// Navigation
+//
+//    testImplementation(libs.mockk) // kotlin mocking framework
 //
 //    androidTestImplementation(libs.turbine)// Flow test
 //    androidTestImplementation(libs.androidx.junit)
@@ -106,20 +105,7 @@ dependencies {
 //
 //    debugImplementation(libs.androidx.ui.tooling)
 //    debugImplementation(libs.androidx.ui.test.manifest)
-//    implementation(libs.androidx.lifecycle.runtime.ktx)
-//    implementation(libs.androidx.activity.compose)
-//    implementation(platform(libs.androidx.compose.bom))
-//    implementation(libs.androidx.ui)
-//    implementation(libs.androidx.ui.graphics)
-//    implementation(libs.androidx.ui.tooling.preview)
-//    implementation(libs.androidx.material3)
-//    testImplementation(libs.junit)
-//    androidTestImplementation(libs.androidx.junit)
-//    androidTestImplementation(libs.androidx.espresso.core)
-//    androidTestImplementation(platform(libs.androidx.compose.bom))
-//    androidTestImplementation(libs.androidx.ui.test.junit4)
-//    debugImplementation(libs.androidx.ui.tooling)
-//    debugImplementation(libs.androidx.ui.test.manifest)
+
 }
 
 /**
